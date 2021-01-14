@@ -9,14 +9,12 @@
 	<description>Simplest possible Java Webapp</description>
 	
 	<repositories>
-   
     		<repository>
-			<id>nexus</id>
-        		<url>http://34.69.95.103:8081/repository/jenkins_artifacts</url>
+       			<id>nexus</id>
+      			<url>http://34.69.95.103:8081/repository/jenkins_artifacts</url>
     		</repository>
-   
-	</repositories>
-
+  	</repositories>
+	
 	<build>
 		<plugins>
 			<plugin>
