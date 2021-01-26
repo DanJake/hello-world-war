@@ -9,5 +9,15 @@ pipeline {
               }
             }
         }
+        stage('deploy') {
+            steps {
+              sshagent(credentials : ['test_server_ssh']) {
+              sh """
+               pwd >> pwd.txt
+               whoami >> whoami.txt
+               """
+              }
+            }
+        }
     }
 }

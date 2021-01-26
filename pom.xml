@@ -7,11 +7,11 @@
 	<packaging>war</packaging>
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
-	
+
 	<distributionManagement>
    		<repository>
       			<id>nexus</id>
-       			<url>http://34.69.95.103:8081/repository/jenkins_artifacts</url>
+       			<url>http://34.122.244.8:8081/repository/jenkins_artifacts</url>
    		</repository>
 	</distributionManagement>
 
@@ -32,5 +32,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>
