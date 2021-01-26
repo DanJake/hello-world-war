@@ -11,10 +11,10 @@ pipeline {
         }
         stage('deploy') {
             steps {
-              sshagent(credentials : ['test_server_ssh']) {
+              sshagent(['tomcat-dev1']) {
               sh """
-               ssh pwd >> pwd.txt
-               ssh whoami >> whoami.txt
+              ssh maksym_zaloznyi@34.75.80.116 pwd >> pwd.txt
+              ssh maksym_zaloznyi@34.75.80.116 whoami >> whoami.txt
                """
               }
             }
