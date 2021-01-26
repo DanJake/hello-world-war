@@ -11,7 +11,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-              sshagent(['tomcat-dev1']) {
+              sshagent(['test_server_ssh']) {
               sh """
               ssh maksym_zaloznyi@34.75.80.116 pwd >> pwd.txt
               ssh maksym_zaloznyi@34.75.80.116 whoami >> whoami.txt
