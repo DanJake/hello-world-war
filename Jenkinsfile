@@ -13,8 +13,8 @@ pipeline {
             steps {
               sshagent(credentials : ['test_server_ssh']) {
               sh """
-               pwd >> pwd.txt
-               whoami >> whoami.txt
+               ssh pwd >> pwd.txt
+               ssh whoami >> whoami.txt
                """
               }
             }
