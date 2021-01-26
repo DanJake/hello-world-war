@@ -13,9 +13,8 @@ pipeline {
             steps {
               sshagent(['test_server_ssh']) {
               sh """
-              ssh -o StrictHostKeyChecking=no maksym_zaloznyi@34.75.80.116 uptime'
-              ssh maksym_zaloznyi@34.75.80.116 pwd
-              ssh maksym_zaloznyi@34.75.80.116 whoami
+              ssh maksym_zaloznyi@35.196.241.69 pwd >> pwd.txt
+              ssh maksym_zaloznyi@35.196.241.69 whoami >> who.txt
                """
               }
             }
