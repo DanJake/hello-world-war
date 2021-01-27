@@ -12,6 +12,7 @@ pipeline {
         stage('deploy') {
             steps {
               sshagent(['test_server_ssh']) {
+                sh 'ssh -o StrictHostKeyChecking=no jenkins@35.196.241.69 uptime'
                 sh 'ssh jenkins@35.196.241.69 /opt/tomcat/bin/shutdown.sh'
                 sh 'ssh jenkins@35.196.241.69 /opt/tomcat/bin/startup.sh'
               }
