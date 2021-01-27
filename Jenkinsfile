@@ -12,9 +12,8 @@ pipeline {
         stage('deploy') {
             steps {
               sshagent(['test_server_ssh']) {
-              sh """
-              ssh -v jenkins@35.196.241.69
-               """
+                sh 'ssh jenkins@35.196.241.69 /opt/tomcat/bin/shutdown.sh'
+                sh 'ssh jenkins@35.196.241.69 /opt/tomcat/bin/startup.sh'
               }
             }
         }
