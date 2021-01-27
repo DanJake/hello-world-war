@@ -13,8 +13,8 @@ pipeline {
             steps {
               sshagent(['test_server_ssh']) {
                 sh 'ssh -o StrictHostKeyChecking=no jenkins@35.196.241.69 uptime'
-                sh 'ssh jenkins@35.196.241.69 /opt/tomcat/latest/bin/shutdown.sh'
-                sh 'ssh jenkins@35.196.241.69 /opt/tomcat/latest/bin/startup.sh'
+                sh 'ssh jenkins@35.196.241.69 sudo systemctl stop tomcat'
+                sh 'ssh jenkins@35.196.241.69 sudo systemctl start tomcat'
               }
             }
         }
